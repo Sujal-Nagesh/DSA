@@ -8,14 +8,17 @@ class LL:
         self.head = None
 
     def display(self):
-        elems = []
-        curn = self.head
-        while curn:
-            elems.append(curn.data)
-            curn = curn.next
-        print(elems)
+        if self.head is None:
+            print("Linked list is empty")
+            return
 
-    
+        elements = []
+        current = self.head
+        while current:
+            elements.append(current.data)
+            current = current.next
+        print("->".join(map(str,elements)))
+
     def LLappend(self, x):
         newnode = LLnode(x)
         
@@ -37,11 +40,6 @@ def array_to_linked_list():
         ll.LLappend(int(element))
     return ll
 
-Ll = LL()
 
 ll = array_to_linked_list()
-ll.display()
-
-y = int(input("Enter no. for appending : "))
-ll.LLappend(y)
 ll.display()

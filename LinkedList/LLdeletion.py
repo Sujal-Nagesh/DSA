@@ -36,13 +36,30 @@ class LL:
 
         print("Node not found in the linked list")
 
-Ll = LL()
-Ll.head = LLnode(5)
-Ll.head.next = LLnode(1)
-Ll.head.next.next = LLnode(3)
-Ll.head.next.next.next = LLnode(4)
+    def LLappend(self, x):
+        newnode = LLnode(x)
+        
+        if self.head is None:
+            self.head = newnode
+            return
 
-Ll.display()
+        current = self.head
+        while current.next:
+            current = current.next
+
+        current.next = newnode
+
+
+def array_to_linked_list():
+    input_array = input("Enter the elements of the array separated by spaces: ").split()
+    ll = LL()
+    for element in input_array:
+        ll.LLappend(int(element))
+    return ll
+
+
+ll = array_to_linked_list()
+ll.display()
 x = int(input("Enter a value to delete: "))
-Ll.deleteNode(x)
-Ll.display()
+ll.deleteNode(x)
+ll.display()
