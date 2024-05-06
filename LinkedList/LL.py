@@ -37,7 +37,7 @@ class LL:
         print("Node not found in the linked list")
 
 Ll = LL()
-Ll.head = LLnode(2)
+Ll.head = LLnode(5)
 Ll.head.next = LLnode(1)
 Ll.head.next.next = LLnode(3)
 Ll.head.next.next.next = LLnode(4)
