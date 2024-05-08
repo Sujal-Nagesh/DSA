@@ -11,4 +11,3 @@ def LCM(arr):
     return lcm
 x = list(map(int, input("Enter integers separated by spaces: ").split()))
 print(LCM(x))
-
