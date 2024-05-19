@@ -9,6 +9,6 @@ def Selection_Sort(n,arr):
         arr[mini] = temp
     print(arr)
 
-n = int(input("Enter the LEngth of array : "))
-array = list(map(int, input("enter the array seperated with space : ").rstrip().split(" ")))
+n = int(input("Enter the Length of array : "))
+array = list(map(int, input("Enter the array seperated with space : ").rstrip().split(" ")))
 Selection_Sort(n,array)
